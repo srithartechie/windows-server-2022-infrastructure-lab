@@ -1,0 +1,11 @@
+$backupPath = "C:\ServerBackup"
+New-Item -Path $backupPath -ItemType Directory -Force
+
+# Export DHCP config
+netsh dhcp server export "$backupPath\dhcp.txt" all
+
+# Export IP config
+ipconfig /all > "$backupPath\network.txt"
+
+# Backup IIS config
+appcmd add backup "MyBackup"

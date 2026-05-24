@@ -1,0 +1,10 @@
+Add-DhcpServerv4Scope -Name "OfficeScope" `
+-StartRange 192.168.200.50 `
+-EndRange 192.168.200.100 `
+-SubnetMask 255.255.255.0 `
+-State Active
+
+Set-DhcpServerv4OptionValue -ScopeId 192.168.10.0 `
+-Router 192.168.200.2 `
+-DnsServer 192.168.200.6 `
+-DnsDomain "test.local"

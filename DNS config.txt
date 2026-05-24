@@ -1,0 +1,7 @@
+# Create DNS zone
+Add-DnsServerPrimaryZone -Name "testdns" -testzone "test.local.testzone"
+
+# Add A record for web server
+Add-DnsServerResourceRecordA -ZoneName :"testzone" `
+-Name "test.local" `
+-IPv4Address 192.168.200.5
