@@ -25,8 +25,55 @@ This project demonstrates a basic Windows Server 2022 setup including ADDS, DHCP
 - IIS web hosting
 - VMware-based lab environment
 
-## Network Architecture
-Client → DHCP → DNS → IIS Server → FTP
+## Server Architecture
+windows-server-2022-infrastructure-lab/
+│
+├── README.md
+├── Architecture/
+│   └── network-diagram.png
+│
+├── ActiveDirectory/
+│   └── ad-setup.md
+│
+├── DHCP/
+│   ├── dhcp-config.ps1
+│   └── dhcp-export.txt
+│
+├── DNS/
+│   ├── dns-config.ps1
+│   └── zone-export.dns
+│
+├── IIS/
+│   ├── iis-setup.ps1
+│   └── website-config.md
+│
+├── FTP/
+│   ├── ftp-setup.ps1
+│   └── ftp-notes.md
+│
+├── Backup/
+│   ├── backup-script.ps1
+│   └── system-backup.txt
+│
+├── Scripts/
+│   ├── install-roles.ps1
+│   ├── dhcp.ps1
+│   ├── dns.ps1
+│   ├── iis.ps1
+│   ├── ftp.ps1
+│
+├── Network/
+│   └── ipconfig-all.txt
+│
+├── Screenshots/
+│   ├── dhcp-scope.png
+│   ├── dns-zone.png
+│   ├── iis-website.png
+│   ├── ftp-test.png
+│
+└── Notes/
+    ├── troubleshooting.md
+    └── learning-summary.md
 
 ## Tools Used
 - Windows Server 2022
